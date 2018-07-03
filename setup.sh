@@ -30,9 +30,11 @@ if [ -d '.vim' ]; then
 fi
 ln -s ~/.dotfiles/.vim
 
+echo "deploying Vundle.vim"
 if [ ! -d '.vim/bundle/Vundle.vim' ]; then
   echo "cloning..."
-  git submodule add git://github.com/VundleVim/Vundle.vim ~/.vim/bundle/Vundle.vim
+  mkdir ~/.vim/bundle
+  git clone https://github.com/VundleVim/Vundle.vim ~/.vim/bundle/Vundle.vim
 fi
 
 echo "deploying .tmux.conf ..."

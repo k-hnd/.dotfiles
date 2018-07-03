@@ -59,7 +59,8 @@ setopt hist_reduce_blanks
 setopt share_history
 setopt extended_history
 setopt hist_ignore_all_dups
-
+autoload predict-on
+predict-on
 ## for prompt
 autoload -U colors
 colors
