@@ -30,8 +30,6 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 " different version somewhere else.
 " Plugin 'ascenator/L9', {'name': 'newL9'}
 Plugin 'scrooloose/nerdtree'
-let NERDTreeShowHidden = 1
-autocmd VimEnter * execute 'NERDTree'
 
 Plugin 'itchyny/lightline.vim'
 " All of your Plugins must be added before the following line
@@ -93,6 +91,11 @@ nmap <Esc><Esc> :nohlsearch<CR><Esc>
 nnoremap <silent><C-e> :NERDTreeToggle<CR>
 nnoremap <C-n> gt
 nnoremap <C-p> gT
+
+" for NERDTree
+let NERDTreeShowHidden = 1
+autocmd VimEnter * execute 'NERDTree'
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 "lightline
 let g:lightline = {
