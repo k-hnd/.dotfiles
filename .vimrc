@@ -69,7 +69,7 @@ set nowrap
 set ruler
 nnoremap j gj
 nnoremap k gk
-colorscheme molokai
+colorscheme monokai
 syntax enable
 
 " for tab
