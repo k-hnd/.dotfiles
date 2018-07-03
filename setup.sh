@@ -1,5 +1,11 @@
 #! /bin/zsh
 
+cd ~
+if [ ! -d '.dotfiles' ]; then
+  echo "cloning..."
+  git clone https://github.com/k-hnd/.dotfiles
+fi
+
 cd ~/.dotfiles
 echo "pulling latest conffiles..."
 git pull
@@ -24,10 +30,21 @@ if [ -d '.vim' ]; then
 fi
 ln -s ~/.dotfiles/.vim
 
+if [ ! -d '.vim/bundle/Vundle.vim' ]; then
+  echo "cloning..."
+  git submodule add git://github.com/VundleVim/Vundle.vim ~/.vim/bundle/Vundle.vim
+fi
+
 echo "deploying .tmux.conf ..."
 if [ -f '.tmux.conf' ]; then
   rm .tmux.conf
 fi
 ln -s ~/.dotfiles/.tmux.conf
+
+echo "deploying .gitconfig ..."
+if [ -f '.gitconfig' ]; then
+  rm .gitconfig
+fi
+ln -s ~/.dotfiles/.gitconfig
 
 echo "done."
