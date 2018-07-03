@@ -1,2 +1,4 @@
 [color]
-	ui = true
+  ui = true
+[core]
+  editor = vim
