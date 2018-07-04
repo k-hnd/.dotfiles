@@ -59,7 +59,6 @@ set clipboard=unnamed,autoselect
 " for visual
 set number
 set paste
-set cursorline
 set virtualedit=onemore
 set laststatus=2
 set smartindent
