@@ -2,3 +2,8 @@
   ui = true
 [core]
   editor = vim
+[alias]
+  co = checkout
+  ba = branch -a
+  logt = log --graph --decorate --oneline
+  st = status

@@ -50,3 +50,4 @@ fi
 ln -s ~/.dotfiles/.gitconfig
 
 echo "done."
+source ~/.zshrc
