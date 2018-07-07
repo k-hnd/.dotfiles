@@ -109,6 +109,9 @@ let g:lightline = {
       \ },
       \ }
 
+" remove white space
+autocmd BufWritePre * :%s/\s\+$//ge
+
 "neocomplete
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
