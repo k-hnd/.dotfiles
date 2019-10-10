@@ -36,6 +36,11 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'scrooloose/nerdtree'
 Plugin 'itchyny/lightline.vim'
 Plugin 'scrooloose/syntastic.git'
+Plugin 'fatih/vim-go'
+
+" for python
+Plugin 'python/black'
+Plugin 'nvie/vim-flake8'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -95,10 +100,6 @@ nnoremap <silent><C-e> :NERDTreeToggle<CR>
 nnoremap <C-n> gt
 nnoremap <C-p> gT
 
-" kakko complete
-inoremap { {}<Left>
-inoremap ( ()<Left>
-
 " yank register
 noremap PP "0p
 noremap x "_x
@@ -126,3 +127,7 @@ autocmd BufWritePre * :%s/\s\+$//ge
 
 " use deoplete
 let g:deoplete#enable_at_startup = 1
+
+" settings of vim-go
+let g:go_fmt_command = "goimports"
+let g:go_metalinter_autosave = 1
