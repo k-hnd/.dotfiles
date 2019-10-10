@@ -36,11 +36,12 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'scrooloose/nerdtree'
 Plugin 'itchyny/lightline.vim'
 Plugin 'scrooloose/syntastic.git'
-Plugin 'fatih/vim-go'
 
+" for golang
+Plugin 'fatih/vim-go'
 " for python
-Plugin 'python/black'
 Plugin 'nvie/vim-flake8'
+Plugin 'python/black'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
