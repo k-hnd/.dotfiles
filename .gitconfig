@@ -7,3 +7,6 @@
   ba = branch -a
   logt = log --graph --decorate --oneline
   st = status
+  see = browse
+[ghq]
+  root = ~/src
