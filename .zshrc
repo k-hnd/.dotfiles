@@ -27,9 +27,10 @@ setopt no_beep
 
 ## disable mail checking
 #MAILCHECK=0
+setopt nonomatch
 bindkey -e
 export LANG=ja_JP.UTF-8
-export EDITOR=vim 
+export EDITOR=vim
 alias l="ls"
 alias ll="ls -la"
 alias la="ls -a"
@@ -76,3 +77,32 @@ zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
 PROMPT='%{${fg[blue]}%}%n@%m:%~%{${reset_color}%} ${vcs_info_msg_0_} %T
 %B%{${fg[red]}%}>%{${reset_color}%}%{${fg[yellow]}%}>%{${reset_color}%}%{${fg[green]}%}> %{${reset_color}%}%b'
+
+# for R programming language
+disable r
+
+# for golang
+export GOPATH=$HOME
+export GOENV_DISABLE_GOPATH=1
+eval "$(goenv init -)"
+
+# for python
+export PYENV_ROOT=$HOME/.pyenv
+eval "$(pyenv init -)"
+export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
+export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
+
+# for ghq and peco
+function peco-src () {
+  local selected_dir=$(ghq list -p | peco --query "$LBUFFER")
+  if [ -n "$selected_dir" ]; then
+    BUFFER="cd ${selected_dir}"
+    zle accept-line
+  fi
+  zle clear-screen
+}
+zle -N peco-src
+bindkey '^]' peco-src
+
+export PATH="$PYENV_ROOT/bin:$HOME/.poetry/bin:$GOPATH/bin:$HOME/.goenv/bin:$HOME/.nodebrew/current/bin:$PATH"
+
