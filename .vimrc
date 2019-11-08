@@ -44,6 +44,9 @@ Plugin 'fatih/vim-go'
 " for python
 Plugin 'nvie/vim-flake8'
 Plugin 'python/black'
+" for frontend typescript, vue
+Plugin 'leafgarland/typescript-vim'
+Plugin 'posva/vim-vue'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
