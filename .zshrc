@@ -83,8 +83,7 @@ disable r
 
 # for golang
 export GOPATH=$HOME
-export GOENV_DISABLE_GOPATH=1
-eval "$(goenv init -)"
+export GO111MODULE=on
 
 # for python
 export PYENV_ROOT=$HOME/.pyenv
@@ -104,5 +103,5 @@ function peco-src () {
 zle -N peco-src
 bindkey '^]' peco-src
 
-export PATH="$PYENV_ROOT/bin:$HOME/.poetry/bin:$GOPATH/bin:$HOME/.goenv/bin:$HOME/.nodebrew/current/bin:$PATH"
+export PATH="$PYENV_ROOT/bin:$HOME/.poetry/bin:/usr/local/go/bin:$GOPATH/bin:$HOME/.nodebrew/current/bin:$PATH"
 
