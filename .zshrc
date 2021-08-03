@@ -87,7 +87,8 @@ export GO111MODULE=on
 
 # for python
 export PYENV_ROOT=$HOME/.pyenv
-eval "$(pyenv init -)"
+export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init --path)"
 export LDFLAGS="-L/usr/local/opt/openssl@1.1/lib"
 export CPPFLAGS="-I/usr/local/opt/openssl@1.1/include"
 
@@ -103,5 +104,5 @@ function peco-src () {
 zle -N peco-src
 bindkey '^]' peco-src
 
-export PATH="$PYENV_ROOT/bin:$HOME/.poetry/bin:/usr/local/go/bin:$GOPATH/bin:$HOME/.nodebrew/current/bin:$PATH"
+export PATH="$HOME/.poetry/bin:/usr/local/go/bin:$GOPATH/bin:$HOME/.nodebrew/current/bin:$PATH"
 
