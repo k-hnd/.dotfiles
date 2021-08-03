@@ -8,9 +8,12 @@
   logt = log --graph --decorate --oneline
   st = status
   see = browse
+  c = commit
 [ghq]
   root = ~/src
 [gpg]
   program = gpg2
 [commit]
   gpgsign = true
+[url "git@github.com:"]
+  insteadOf = https://github.com/
