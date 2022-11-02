@@ -12,8 +12,11 @@
 [ghq]
   root = ~/src
 [gpg]
-  program = gpg2
+  program = gpg
+[fetch]
+  prune = true
 [commit]
   gpgsign = true
 [url "git@github.com:"]
   insteadOf = https://github.com/
+
