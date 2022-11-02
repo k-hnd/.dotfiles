@@ -15,8 +15,11 @@ mkdir ~/src ~/pkg ~/bin
 ## for python
 ```
 git clone https://github.com/pyenv/pyenv.git ~/.pyenv
+pyenv install x.x.x
 pip install black flake8
 ```
+- [pyenv doc](https://github.com/pyenv/pyenv)
+- [Caution: pyenv install](https://github.com/pyenv/pyenv/issues/1290)
 
 ## for ghq and peco
 ```
