@@ -104,5 +104,5 @@ function peco-src () {
 zle -N peco-src
 bindkey '^]' peco-src
 
-export PATH="$HOME/.tfenv/bin:$HOME/.poetry/bin:/usr/local/go/bin:$GOPATH/bin:$HOME/.nodebrew/current/bin:$PATH"
+export PATH="$HOME/.tfenv/bin:$HOME/.local/bin:/usr/local/go/bin:$GOPATH/bin:$HOME/.nodebrew/current/bin:$PATH"
 
