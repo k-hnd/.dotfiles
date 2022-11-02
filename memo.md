@@ -20,10 +20,16 @@ pip install black flake8
 ```
 - [pyenv doc](https://github.com/pyenv/pyenv)
 - [Caution: pyenv install](https://github.com/pyenv/pyenv/issues/1290)
+- [poetry doc](https://python-poetry.org/docs/)
+
+## for vim
+```
+:PluginInstall
+```
 
 ## for ghq and peco
 ```
-go get github.com/motemen/ghq
+go install github.com/x-motemen/ghq@latest
 sudo apt install peco
 ```
 
